@@ -177,7 +177,7 @@ Run the app on an emulator or physical device to test:
 - Navigation between screens
 
 ## License
-Educational project for University of Portsmouth - Mobile App Development
+Educational project for University of People - Mobile App Development
 
 ## Author
-University of Portsmouth Student
+University of People Student
