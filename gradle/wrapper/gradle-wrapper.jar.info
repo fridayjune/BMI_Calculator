@@ -1,0 +1,12 @@
+# Gradle Wrapper JAR
+#
+# The gradle-wrapper.jar file is a binary file that should be downloaded when you first
+# sync the project in Android Studio or run ./gradlew for the first time.
+#
+# This file will be automatically downloaded from:
+# https://services.gradle.org/distributions/
+#
+# If you need to manually download it, run:
+# gradle wrapper --gradle-version 8.2
+#
+# Or simply open the project in Android Studio and it will download automatically.

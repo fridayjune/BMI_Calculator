@@ -1,0 +1,10 @@
+[
+    {
+        "merged": "com.uop.bmicalculator.app-mergeDebugResources-30:/layout/activity_result.xml",
+        "source": "com.uop.bmicalculator.app-main-33:/layout/activity_result.xml"
+    },
+    {
+        "merged": "com.uop.bmicalculator.app-mergeDebugResources-30:/layout/activity_main.xml",
+        "source": "com.uop.bmicalculator.app-main-33:/layout/activity_main.xml"
+    }
+]

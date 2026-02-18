@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">BMI Calculator</string>
+
+    <!-- Main Activity Strings -->
+    <string name="title_bmi_calculator">BMI Calculator</string>
+    <string name="subtitle_calculate_health">Calculate Your Body Mass Index</string>
+
+    <!-- Input Labels -->
+    <string name="label_weight">Weight (kg)</string>
+    <string name="label_height">Height (cm)</string>
+    <string name="label_age">Age (years)</string>
+    <string name="label_gender">Gender</string>
+
+    <!-- Hints -->
+    <string name="hint_weight">Enter your weight</string>
+    <string name="hint_height">Enter your height</string>
+    <string name="hint_age">Enter your age</string>
+    <string name="hint_select_gender">Select gender</string>
+
+    <!-- Buttons -->
+    <string name="btn_calculate">Calculate BMI</string>
+    <string name="btn_recalculate">Calculate Again</string>
+    <string name="btn_back">Back</string>
+
+    <!-- Gender Options -->
+    <string-array name="gender_options">
+        <item>Select Gender</item>
+        <item>Male</item>
+        <item>Female</item>
+        <item>Other</item>
+    </string-array>
+
+    <!-- Result Activity Strings -->
+    <string name="title_your_result">Your BMI Result</string>
+    <string name="label_bmi_value">BMI Value</string>
+    <string name="label_category">Category</string>
+    <string name="label_status">Health Status</string>
+    <string name="label_ideal_weight">Ideal Weight Range</string>
+    <string name="label_recommendation">Recommendation</string>
+
+    <!-- BMI Categories -->
+    <string name="category_underweight">Underweight</string>
+    <string name="category_normal">Normal Weight</string>
+    <string name="category_overweight">Overweight</string>
+    <string name="category_obese">Obese</string>
+
+    <!-- Error Messages -->
+    <string name="error_empty_weight">Please enter your weight</string>
+    <string name="error_empty_height">Please enter your height</string>
+    <string name="error_empty_age">Please enter your age</string>
+    <string name="error_select_gender">Please select your gender</string>
+    <string name="error_invalid_weight">Please enter a valid weight (10-300 kg)</string>
+    <string name="error_invalid_height">Please enter a valid height (50-250 cm)</string>
+    <string name="error_invalid_age">Please enter a valid age (1-120 years)</string>
+
+    <!-- Status Messages -->
+    <string name="status_healthy">Healthy</string>
+    <string name="status_needs_attention">Needs Attention</string>
+
+    <!-- Info -->
+    <string name="info_person_details">Person Details</string>
+    <string name="format_weight">Weight: %.1f kg</string>
+    <string name="format_height">Height: %.0f cm</string>
+    <string name="format_age">Age: %d years</string>
+    <string name="format_gender">Gender: %s</string>
+    <string name="format_ideal_range">%.1f - %.1f kg</string>
+</resources>

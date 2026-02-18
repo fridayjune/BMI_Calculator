@@ -1,0 +1,165 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true"
+    android:background="@color/background_light"
+    tools:context=".MainActivity">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="16dp">
+
+        <!-- Title -->
+        <TextView
+            android:id="@+id/tvTitle"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="@string/title_bmi_calculator"
+            android:textAlignment="center"
+            style="@style/TitleTextStyle"
+            android:textSize="28sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            android:layout_marginTop="24dp" />
+
+        <!-- Subtitle -->
+        <TextView
+            android:id="@+id/tvSubtitle"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="@string/subtitle_calculate_health"
+            android:textAlignment="center"
+            style="@style/SubtitleTextStyle"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tvTitle" />
+
+        <!-- Input Card -->
+        <com.google.android.material.card.MaterialCardView
+            android:id="@+id/cardInput"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            style="@style/CardViewStyle"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tvSubtitle"
+            android:layout_marginTop="16dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="16dp">
+
+                <!-- Weight Input -->
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/tilWeight"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    style="@style/InputFieldStyle"
+                    android:hint="@string/label_weight"
+                    app:startIconDrawable="@android:drawable/ic_menu_view"
+                    app:endIconMode="clear_text">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/etWeight"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:inputType="numberDecimal"
+                        android:maxLines="1" />
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <!-- Height Input -->
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/tilHeight"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    style="@style/InputFieldStyle"
+                    android:hint="@string/label_height"
+                    app:startIconDrawable="@android:drawable/ic_menu_view"
+                    app:endIconMode="clear_text">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/etHeight"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:inputType="numberDecimal"
+                        android:maxLines="1" />
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <!-- Age Input -->
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/tilAge"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    style="@style/InputFieldStyle"
+                    android:hint="@string/label_age"
+                    app:startIconDrawable="@android:drawable/ic_menu_view"
+                    app:endIconMode="clear_text">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/etAge"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:inputType="number"
+                        android:maxLines="1" />
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <!-- Gender Spinner -->
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/tilGender"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.ExposedDropdownMenu"
+                    android:hint="@string/label_gender"
+                    android:layout_marginTop="8dp"
+                    android:layout_marginBottom="8dp">
+
+                    <AutoCompleteTextView
+                        android:id="@+id/actvGender"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:inputType="none"
+                        android:maxLines="1" />
+                </com.google.android.material.textfield.TextInputLayout>
+
+            </LinearLayout>
+        </com.google.android.material.card.MaterialCardView>
+
+        <!-- Calculate Button -->
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btnCalculate"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="@string/btn_calculate"
+            style="@style/ButtonStyle"
+            android:layout_marginTop="24dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginEnd="16dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/cardInput"
+            app:icon="@android:drawable/ic_menu_view"
+            app:iconGravity="textStart" />
+
+        <!-- Info Text -->
+        <TextView
+            android:id="@+id/tvInfo"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="BMI = Weight (kg) / Height² (m)"
+            android:textAlignment="center"
+            android:textSize="12sp"
+            android:textColor="@color/text_hint"
+            android:layout_marginTop="16dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/btnCalculate" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</ScrollView>

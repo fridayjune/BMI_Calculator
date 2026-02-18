@@ -1,0 +1,232 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true"
+    android:background="@color/background_light"
+    tools:context=".ResultActivity">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="16dp">
+
+        <!-- Title -->
+        <TextView
+            android:id="@+id/tvTitle"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="@string/title_your_result"
+            android:textAlignment="center"
+            style="@style/TitleTextStyle"
+            android:textSize="28sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            android:layout_marginTop="24dp" />
+
+        <!-- BMI Result Card -->
+        <com.google.android.material.card.MaterialCardView
+            android:id="@+id/cardBMIResult"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            style="@style/CardViewStyle"
+            app:cardBackgroundColor="@color/card_background"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tvTitle"
+            android:layout_marginTop="24dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="24dp"
+                android:gravity="center">
+
+                <!-- BMI Value -->
+                <TextView
+                    android:id="@+id/tvBMILabel"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/label_bmi_value"
+                    style="@style/LabelTextStyle"
+                    android:textSize="16sp" />
+
+                <TextView
+                    android:id="@+id/tvBMIValue"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="0.0"
+                    style="@style/BMIValueTextStyle"
+                    tools:text="23.5" />
+
+                <!-- Category -->
+                <TextView
+                    android:id="@+id/tvCategory"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/category_normal"
+                    style="@style/CategoryTextStyle"
+                    android:textColor="@color/bmi_normal"
+                    tools:text="Normal Weight" />
+
+                <!-- Divider -->
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="@color/divider"
+                    android:layout_marginTop="16dp"
+                    android:layout_marginBottom="16dp" />
+
+                <!-- Status -->
+                <TextView
+                    android:id="@+id/tvStatusLabel"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/label_status"
+                    style="@style/LabelTextStyle" />
+
+                <TextView
+                    android:id="@+id/tvStatus"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/status_healthy"
+                    style="@style/ValueTextStyle"
+                    android:textColor="@color/status_healthy"
+                    tools:text="Healthy" />
+
+            </LinearLayout>
+        </com.google.android.material.card.MaterialCardView>
+
+        <!-- Person Details Card -->
+        <com.google.android.material.card.MaterialCardView
+            android:id="@+id/cardPersonDetails"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            style="@style/CardViewStyle"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/cardBMIResult"
+            android:layout_marginTop="8dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="16dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/info_person_details"
+                    style="@style/LabelTextStyle"
+                    android:textSize="16sp"
+                    android:layout_marginBottom="8dp" />
+
+                <TextView
+                    android:id="@+id/tvPersonDetails"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textSize="14sp"
+                    android:textColor="@color/text_secondary"
+                    android:lineSpacingExtra="4dp"
+                    tools:text="Weight: 70.0 kg\nHeight: 175 cm\nAge: 25 years\nGender: Male" />
+
+            </LinearLayout>
+        </com.google.android.material.card.MaterialCardView>
+
+        <!-- Ideal Weight Card -->
+        <com.google.android.material.card.MaterialCardView
+            android:id="@+id/cardIdealWeight"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            style="@style/CardViewStyle"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/cardPersonDetails"
+            android:layout_marginTop="8dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="16dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/label_ideal_weight"
+                    style="@style/LabelTextStyle"
+                    android:textSize="16sp" />
+
+                <TextView
+                    android:id="@+id/tvIdealWeight"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    style="@style/ValueTextStyle"
+                    android:textColor="@color/primary"
+                    tools:text="56.7 - 76.4 kg" />
+
+            </LinearLayout>
+        </com.google.android.material.card.MaterialCardView>
+
+        <!-- Recommendation Card -->
+        <com.google.android.material.card.MaterialCardView
+            android:id="@+id/cardRecommendation"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            style="@style/CardViewStyle"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/cardIdealWeight"
+            android:layout_marginTop="8dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="16dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/label_recommendation"
+                    style="@style/LabelTextStyle"
+                    android:textSize="16sp"
+                    android:layout_marginBottom="8dp" />
+
+                <TextView
+                    android:id="@+id/tvRecommendation"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textSize="14sp"
+                    android:textColor="@color/text_secondary"
+                    android:lineSpacingExtra="4dp"
+                    tools:text="Great! You have a healthy weight. Keep maintaining your lifestyle." />
+
+            </LinearLayout>
+        </com.google.android.material.card.MaterialCardView>
+
+        <!-- Recalculate Button -->
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btnRecalculate"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="@string/btn_recalculate"
+            style="@style/ButtonStyle"
+            android:layout_marginTop="24dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginEnd="16dp"
+            android:layout_marginBottom="16dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/cardRecommendation"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:icon="@android:drawable/ic_menu_rotate"
+            app:iconGravity="textStart" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</ScrollView>

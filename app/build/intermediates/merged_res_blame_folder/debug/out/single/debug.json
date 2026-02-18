@@ -1,0 +1,26 @@
+[
+    {
+        "merged": "C:\\Users\\Thida(LAAS)\\.gradle\\daemon\\8.2\\com.uop.bmicalculator.app-merged_res-31:\\layout_activity_main.xml.flat",
+        "source": "C:\\Users\\Thida(LAAS)\\.gradle\\daemon\\8.2\\com.uop.bmicalculator.app-main-33:\\layout\\activity_main.xml"
+    },
+    {
+        "merged": "com.uop.bmicalculator.app-merged_res-31:/drawable_ic_launcher_foreground.xml.flat",
+        "source": "com.uop.bmicalculator.app-main-33:/drawable/ic_launcher_foreground.xml"
+    },
+    {
+        "merged": "com.uop.bmicalculator.app-merged_res-31:/mipmap-anydpi-v26_ic_launcher_round.xml.flat",
+        "source": "com.uop.bmicalculator.app-main-33:/mipmap-anydpi-v26/ic_launcher_round.xml"
+    },
+    {
+        "merged": "com.uop.bmicalculator.app-merged_res-31:/drawable_ic_launcher_background.xml.flat",
+        "source": "com.uop.bmicalculator.app-main-33:/drawable/ic_launcher_background.xml"
+    },
+    {
+        "merged": "com.uop.bmicalculator.app-merged_res-31:/mipmap-anydpi-v26_ic_launcher.xml.flat",
+        "source": "com.uop.bmicalculator.app-main-33:/mipmap-anydpi-v26/ic_launcher.xml"
+    },
+    {
+        "merged": "C:\\Users\\Thida(LAAS)\\.gradle\\daemon\\8.2\\com.uop.bmicalculator.app-merged_res-31:\\layout_activity_result.xml.flat",
+        "source": "C:\\Users\\Thida(LAAS)\\.gradle\\daemon\\8.2\\com.uop.bmicalculator.app-main-33:\\layout\\activity_result.xml"
+    }
+]
